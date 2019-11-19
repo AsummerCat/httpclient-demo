@@ -37,6 +37,8 @@ import java.util.Map;
 /**
  * Http请求工具类
  * HttpClient
+ * @author cxc
+ * @date 2019年11月19日14:01:00
  */
 @Log4j2
 public class HttpUtils {
