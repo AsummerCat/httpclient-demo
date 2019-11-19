@@ -1,5 +1,6 @@
 package com.linjingc.httpclientdemo.controller;
 
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -29,6 +30,15 @@ public class SendController {
 			parameters.put(parameterName, request.getParameter(parameterName));
 			System.out.println("key:" + parameterName + "-----" + "value=" + request.getParameter(parameterName));
 		}
+		return "SUCCESS";
+	}
+
+	@RequestMapping(value = "postMethodJson", method = RequestMethod.POST)
+	public String postMethodJson(@RequestBody Map<String, Object> map) {
+		map.entrySet().forEach(e -> {
+			System.out.println("key:" + e.getKey() + "-----" + "value=" + e.getValue());
+
+		});
 		return "SUCCESS";
 	}
 
