@@ -37,6 +37,7 @@ import java.util.Map;
 /**
  * Http请求工具类
  * HttpClient
+ *
  * @author cxc
  * @date 2019年11月19日14:01:00
  */
@@ -198,6 +199,7 @@ public class HttpUtils {
 
 	/**
 	 * Http发送普通表单请求 post 无参
+	 *
 	 * @param url
 	 * @return
 	 */
@@ -228,9 +230,11 @@ public class HttpUtils {
 	public static String get(String url, Map<String, Object> params, RequestConfig requestConfig) {
 		return doGet(url, params, requestConfig);
 	}
+
 	/**
 	 * Http发送普通表单请求 get 无参
-	 * @param url           链接地址
+	 *
+	 * @param url 链接地址
 	 * @return
 	 */
 	public static String get(String url) {
